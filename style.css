@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, 
+                                #530202b0 0%, 
+                                #2e2d2d 100%);
+    position: relative;
+}
+
+/*=== nav ===*/
+.nav {
+    padding: 0.5rem 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 50%);
+}
+
+/* logo */
+.logo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    column-gap: 0.25rem;
+}
+
+.logo img {
+    width: 3rem;
+}
+
+.logo h2 {
+    color: #37D0EE;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #ffa500;
+    font-weight: 400;
+}
+
+/* button */
+.btn {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(45deg, #ff0000c9 0%, #ffa600c9 100%);
+    transition: background 0.4s;
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #ffa600c5 0%, #ff0000ce 100%);
+}
+
+
+/*=== calendar ===*/
+.title {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    color: #37D0EE;
+    text-decoration: underline #ffa500;
+    text-underline-offset: 0.25rem;
+    margin-block: 1.5rem;
+}
+
+.calendar-box {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calender {
+    width: 16rem;
+    height: 12rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.98) -3px 5px 25px;
+    border: 1px solid #4b6cb7;
+}
+
+.calendar-left,
+.calendar-right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.calendar-right {
+    width: 43%;
+    background: #f30202;
+    color: #fff;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.calendar-left {
+    width: 58%;
+    background-image: linear-gradient(45deg, #ffa6001a 0%, #ff00001a 100%), url(img/bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform: scale(1.1) translateY(-0.5rem);
+}
+
+#date {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 80px;
+    color: #37D0EE;
+    background: #f3020275;
+    border-radius: 50%;
+    width: 7.5rem;
+    height: 7.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-0.25rem);
+}
+
+#day {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0.1rem 0.2rem;
+}
+
+#month {
+    font-size: 2rem;
+    font-weight: 1000;
+}
+
+#year {
+    font-size: 2.5rem;
+}
+
+
+/* footer */
+footer {
+    padding: .5rem 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-evenly;
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 50%);
+}
+
+footer p {
+    padding: 0.1rem;
+    font-size: 0.75rem;
+    color: #f8f4f4;
+}
+
+footer p a {
+    color: #8fb1f3;
+    text-decoration: underline;
+    text-underline-offset: .2rem;
+    transition: all 0.4s;
+}
+
+footer p a:hover {
+    text-decoration: none;
+    color: #ffa500;
+}
+
+
+/* responsive design */
+@media screen and (max-width: 576px) {
+    .nav {
+        padding: 0.5rem 3%;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        column-gap: 0.25rem;
+    }
+    
+    .logo img {
+        width: 2rem;
+    }
+    
+    .logo h2 {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    
+    .btn {
+        font-size: 0.8rem;
+        padding: 0.5rem 1.25rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        margin-block: 1rem;
+    }
+    
+    footer p {
+        font-size: 0.5rem;
+    }
+}
